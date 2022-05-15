@@ -40,13 +40,10 @@ function loadComplaint(url) {
     success: function (response) {
       $.each(response, function (i, item) {
         var $tr = $('<tr  class="table-light">').append(
-          $('<th>').text(item.nic),
-          $('<td>').text(item.name),
-          $('<td>').text(item.address),
-          $('<td>').text(item.phone),
-          $('<td>').text(item.gender),
-          $('<td>').text(item.age),
-          $('<td>').text(item.email),
+          $('<th>').text(item.customerName),
+          $('<td>').text(item.complaint),
+          $('<td>').text(item.customerId),
+          $('<td>').text(item.employeeId),
           $('<td>').append('<ul class="flexList"><li><a href="complaintedit.html?id=' + item.complaintId + '"><button><i class="far fa-pen"></i></button></a></li><li><button onClick="deleteitem(' + item.complaintId + ')"><i class="far fa-trash-alt"></i></button></li></ul>')
         )
           .appendTo('#tbody');
