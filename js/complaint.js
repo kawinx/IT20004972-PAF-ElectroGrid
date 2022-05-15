@@ -63,6 +63,6 @@ function deleteitem(id) {
   });
 }
 
-function getAUser(url){
+function getAComplaint(url){
  console.log( $.urlParam('id'));
 }
